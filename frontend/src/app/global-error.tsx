@@ -1,18 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+export const dynamic = "force-dynamic";
 
 export default function GlobalError({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    console.error("Global application error:", error);
-  }, [error]);
-
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col items-center justify-center p-4 font-sans text-neutral-800 bg-white">
@@ -22,6 +17,7 @@ export default function GlobalError({
             An unexpected error occurred. Please try again.
           </p>
           <button
+            type="button"
             onClick={() => reset()}
             className="px-4 py-2 bg-[#fe7900] text-white rounded font-medium hover:bg-[#e06b00] transition-colors"
           >
