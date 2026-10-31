@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M14 15L24 35L34 15" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 23L30 15" stroke="#fe7900" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="44" y="27" font-family="'Montserrat', sans-serif" font-size="13" font-weight="700" fill="#0f172a" letter-spacing="1.5">VANGUARD</text>
+  <text x="44" y="38" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="500" fill="#64748b" letter-spacing="2">CLEANPOWER</text>
+</svg>

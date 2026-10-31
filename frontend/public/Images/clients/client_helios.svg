@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <circle cx="24" cy="25" r="8" fill="#fe7900"/>
+  <path d="M24 8V12M24 38V42M7 25H11M37 25H41M12 13L15 16M33 34L36 37M12 37L15 34M33 16L36 13" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="48" y="29" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" fill="#0f172a" letter-spacing="2">HELIOS</text>
+  <text x="48" y="39" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="500" fill="#64748b" letter-spacing="1.5">COMMERCIAL</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M15 34C15 22 25 15 32 15C32 23 27 34 15 34Z" fill="#1e293b"/>
+  <path d="M32 15C32 27 22 34 15 34C22 34 32 28 32 15Z" fill="#fe7900" opacity="0.9"/>
+  <text x="42" y="28" font-family="'Montserrat', sans-serif" font-size="15" font-weight="800" fill="#1e293b" letter-spacing="3">AURA</text>
+  <text x="42" y="38" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="600" fill="#64748b" letter-spacing="1.8">ENERGY GROUP</text>
+</svg>

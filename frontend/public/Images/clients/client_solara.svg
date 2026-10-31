@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M22 10L32 25L22 40L12 25Z" fill="#1e293b"/>
+  <circle cx="22" cy="25" r="5" fill="#fe7900"/>
+  <text x="42" y="28" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" fill="#1e293b" letter-spacing="1.5">SOLARA</text>
+  <text x="42" y="39" font-family="'Montserrat', sans-serif" font-size="8" font-weight="500" fill="#64748b" letter-spacing="2.5">DYNAMICS</text>
+</svg>

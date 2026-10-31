@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M25 12L15 26H24L21 38L31 24H22L25 12Z" fill="#fe7900"/>
+  <circle cx="23" cy="25" r="14" stroke="#334155" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="45" y="28" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" fill="#1e293b" letter-spacing="1.5">ECOVOLT</text>
+  <text x="45" y="38" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="500" fill="#64748b" letter-spacing="2">ENGINEERING</text>
+</svg>

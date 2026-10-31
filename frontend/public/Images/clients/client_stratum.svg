@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M12 34H36M15 26H33M19 18H29" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="12" r="2.5" fill="#fe7900"/>
+  <text x="46" y="28" font-family="'Montserrat', sans-serif" font-size="14" font-weight="800" fill="#0f172a" letter-spacing="2">STRATUM</text>
+  <text x="46" y="38" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="600" fill="#64748b" letter-spacing="2.5">POWER</text>
+</svg>

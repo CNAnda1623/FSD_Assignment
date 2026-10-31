@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+build/
+
+# misc
+.DS_Store
+*.pem
+*.log*
+
+# env files
+.env*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+
+# local test & db files
+.sungrow_store.json
+.last_code.json

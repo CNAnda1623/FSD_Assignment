@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <circle cx="24" cy="25" r="14" stroke="#334155" stroke-width="2.5"/>
+  <path d="M24 13V37M12 25H36" stroke="#334155" stroke-width="2"/>
+  <circle cx="24" cy="25" r="4" fill="#fe7900"/>
+  <text x="46" y="27" font-family="'Montserrat', sans-serif" font-size="14" font-weight="800" fill="#1e293b" letter-spacing="1">APEX</text>
+  <text x="86" y="27" font-family="'Montserrat', sans-serif" font-size="14" font-weight="400" fill="#fe7900" letter-spacing="1">GRID</text>
+  <text x="46" y="38" font-family="'Montserrat', sans-serif" font-size="7" font-weight="600" fill="#94a3b8" letter-spacing="3">SOLUTIONS</text>
+</svg>

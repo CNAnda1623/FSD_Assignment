@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M14 36L22 14H30L22 36H14Z" fill="#0f172a"/>
+  <path d="M25 14L33 36H41L33 14H25Z" fill="#fe7900"/>
+  <text x="48" y="29" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" fill="#0f172a" letter-spacing="1">NEXVOLT</text>
+  <text x="48" y="39" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="600" fill="#64748b" letter-spacing="2">POWER GRID</text>
+</svg>

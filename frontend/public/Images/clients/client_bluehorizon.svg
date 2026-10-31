@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <path d="M12 28C16 22 22 22 26 28C30 22 36 22 40 28" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M26 14C23 14 20 17 20 20H32C32 17 29 14 26 14Z" fill="#fe7900"/>
+  <text x="48" y="26" font-family="'Montserrat', sans-serif" font-size="13" font-weight="700" fill="#0f172a" letter-spacing="1">BLUE</text>
+  <text x="87" y="26" font-family="'Montserrat', sans-serif" font-size="13" font-weight="500" fill="#fe7900" letter-spacing="1">HORIZON</text>
+  <text x="48" y="37" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="600" fill="#64748b" letter-spacing="2">RENEWABLES</text>
+</svg>
