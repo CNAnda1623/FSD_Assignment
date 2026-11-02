@@ -28,6 +28,22 @@ export const assets: Record<string, AssetEntry> = {
     height: 16,
     alt: "India flag",
   },
+  "brand.iso": {
+    id: "X-ISO",
+    kind: "image",
+    src: "/Images/Home/iso_logo.jpg",
+    width: 512,
+    height: 512,
+    alt: "ISO Certified Logo",
+  },
+  "brand.hpp": {
+    id: "X-HPP",
+    kind: "image",
+    src: "/Images/Home/HPP logo.png",
+    width: 512,
+    height: 512,
+    alt: "HPP Logo",
+  },
   "social.linkedin": {
     id: "X-01c",
     kind: "icon",

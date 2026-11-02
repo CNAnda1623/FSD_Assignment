@@ -2,31 +2,23 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Search, User, Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { navigationItems } from "@/data/navigation";
-import { internalLinks } from "@/lib/links";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
   toggleMobileNav,
   openMegaMenu,
   closeMegaMenu,
-  setNavRowHidden,
-  selectNavRowHidden,
   selectActiveMegaMenu,
 } from "@/store/slices/uiSlice";
-import { selectAuthStatus, selectUser } from "@/store/slices/authSlice";
 import { SmartImage } from "../ui/SmartImage";
 import { MegaMenu } from "./MegaMenu";
 import { MobileDrawer } from "./MobileDrawer";
-import { UserMenu } from "@/components/auth/UserMenu";
 import { AccountDialogs } from "@/components/auth/AccountDialogs";
 
 export function SiteHeader() {
   const dispatch = useAppDispatch();
-  const authStatus = useAppSelector(selectAuthStatus);
-  const user = useAppSelector(selectUser);
-  const navRowHidden = useAppSelector(selectNavRowHidden);
   const activeMegaMenuId = useAppSelector(selectActiveMegaMenu);
 
   // Synchronize global scroll direction with Redux
@@ -68,143 +60,204 @@ export function SiteHeader() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [dispatch]);
 
+  const marqueeMessage =
+    "Are you looking for Extra High Voltage Engineering Consultancy Services in Kolkata ? We are providing the same for Substations and Transmission Lines upto 765kV Voltage level.";
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#ffffff] border-b border-neutral-100/60 transition-transform duration-300">
-        {/* ROW 1: Logo & Utility Bar (85px tall, 60px padding-x, strictly centered 148px logo) */}
-        <div className="w-full px-4 sm:px-8 lg:px-[60px] h-[72px] sm:h-[85px] flex items-center justify-between relative">
-          {/* Left: Region Flag + Country name (starts at x ~ 60px) */}
-          <div className="flex items-center gap-2 z-10">
-            <SmartImage
-              assetKey="brand.flag"
-              width={22}
-              height={15}
-              className="w-5 h-auto object-contain"
-              alt="India"
-            />
-            <span className="hidden sm:inline text-xs font-medium text-neutral-700">
-              India
-            </span>
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white transition-transform duration-300 shadow-xs">
+        {/* ================= STRIP 1: TOP BLACK SLIM STRIP ================= */}
+        <div className="w-full bg-[#0a0a0a] text-white border-b border-neutral-900/80 px-3 sm:px-6 lg:px-10 h-[38px] flex items-center justify-between relative overflow-hidden select-none">
+          {/* LEFT: Flag + Phone Number */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 z-10">
+            {/* India Flag */}
+            <div className="flex items-center gap-1.5">
+              <SmartImage
+                assetKey="brand.flag"
+                width={18}
+                height={12}
+                className="w-4 sm:w-4.5 h-auto object-contain rounded-[1px]"
+                alt="India"
+              />
+              <span className="hidden sm:inline text-[11px] font-semibold text-neutral-300 tracking-wider uppercase">
+                India
+              </span>
+            </div>
+
+            <span className="text-neutral-700 text-xs hidden sm:inline">|</span>
+
+            {/* Phone Number */}
+            <a
+              href="tel:+913371482187"
+              className="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium text-neutral-200 hover:text-[#fe7900] transition-colors whitespace-nowrap"
+              title="Call Consultancy Desk"
+            >
+              <Phone className="w-3 h-3 text-[#fe7900] shrink-0" />
+              <span className="tracking-wide">+91 3371 4821 87</span>
+            </a>
           </div>
 
-          {/* Center: Sungrow Logo (strictly 148px wide, exactly centered at 50% page width, vertical center ~42px) */}
-          <Link
-            href="/"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded z-10"
+          {/* CENTER: ~70% Reserved Space with Moving Marquee Text (Right to Left) */}
+          <div
+            className="flex-1 min-w-0 overflow-hidden relative mx-2 sm:mx-6 h-full flex items-center justify-start"
+            title={marqueeMessage}
           >
-            <SmartImage
-              assetKey="brand.logo"
-              width={148}
-              height={34}
-              className="w-[124px] sm:w-[148px] h-auto object-contain"
-              alt="SUNGROW Logo"
-              priority
-            />
-          </Link>
+            <div className="animate-marquee-rtl flex whitespace-nowrap items-center py-1 cursor-default">
+              {[0, 1, 2, 3].map((idx) => (
+                <span
+                  key={idx}
+                  className="text-[11px] sm:text-xs font-medium text-amber-300/95 tracking-wide inline-flex items-center gap-2 pr-7 sm:pr-8 shrink-0"
+                >
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#fe7900] animate-pulse shrink-0" />
+                  <span>{marqueeMessage}</span>
+                </span>
+              ))}
+            </div>
+          </div>
 
-          {/* Right: Search, Login & Mobile Hamburger (ends at x ~ 1844px) */}
-          <div className="flex items-center gap-3 sm:gap-5 z-10">
+          {/* RIGHT: Social Media Logos */}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 z-10">
             <a
-              href="https://www.sungrowpower.com/in/en/search-results"
+              href="https://www.linkedin.com/company/sungrow-power-supply-co-ltd/posts/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Search"
-              className="p-1.5 text-neutral-600 hover:text-[#fe7900] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded-full"
+              aria-label="LinkedIn"
+              className="p-1 text-neutral-400 hover:text-[#fe7900] transition-colors"
             >
-              <Search className="w-4 h-4 stroke-[1.8]" />
-            </a>
-
-            {/* Auth Session Right Cluster */}
-            {authStatus === "loading" ? (
-              // Same-width placeholder during loading: avoids layout jump and LOGIN flash
-              <div
-                className="hidden sm:block w-[68px] h-[28px]"
-                aria-hidden="true"
+              <SmartImage
+                assetKey="social.linkedin"
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 brightness-0 invert opacity-75 hover:opacity-100 transition-opacity"
+                alt="LinkedIn"
               />
-            ) : authStatus === "authenticated" && user ? (
-              <UserMenu />
-            ) : (
-              <Link
-                href={internalLinks.login}
-                className="hidden sm:flex items-center gap-1.5 text-xs font-medium tracking-wider text-neutral-800 hover:text-[#fe7900] transition-colors px-2 py-1.5 rounded-full hover:bg-neutral-50"
-              >
-                <User className="w-3.5 h-3.5 text-neutral-600" />
-                <span>LOGIN</span>
-              </Link>
-            )}
-
-            {/* Mobile Hamburger Button */}
-            <button
-              type="button"
-              onClick={() => dispatch(toggleMobileNav())}
-              aria-label="Open mobile menu"
-              className="xl:hidden p-1.5 text-neutral-700 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded"
+            </a>
+            <a
+              href="https://www.facebook.com/CleanPowerForAll"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="p-1 text-neutral-400 hover:text-[#fe7900] transition-colors"
             >
-              <Menu className="w-6 h-6" />
-            </button>
+              <SmartImage
+                assetKey="social.facebook"
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 brightness-0 invert opacity-75 hover:opacity-100 transition-opacity"
+                alt="Facebook"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/sungrow_power/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-1 text-neutral-400 hover:text-[#fe7900] transition-colors"
+            >
+              <SmartImage
+                assetKey="social.instagram"
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 brightness-0 invert opacity-75 hover:opacity-100 transition-opacity"
+                alt="Instagram"
+              />
+            </a>
           </div>
         </div>
 
-        {/* ROW 2: Desktop Navigation Bar (Hides on scroll down) */}
-        <div
-          className={`hidden xl:block border-t border-neutral-100 transition-all duration-300 overflow-hidden ${
-            navRowHidden ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
-          }`}
-        >
-          <div className="max-w-[1400px] mx-auto px-8">
-            <nav
-              aria-label="Main Navigation"
-              className="flex items-center justify-center gap-10 lg:gap-12 h-12"
-            >
-              {navigationItems.map((item) => {
-                if (item.isDirectLink && item.href) {
+        {/* ================= STRIP 2 & 3 COMBINED: WHITE MAIN HEADER ================= */}
+        {/* Height accommodates both side logos (HPP on left, ISO on right) */}
+        {/* Strip 3 (Navbar) positioned lower down */}
+        <div className="w-full bg-white border-b border-neutral-100/90 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+          <div className="w-full px-4 sm:px-6 lg:px-10 h-[86px] sm:h-[94px] lg:h-[100px] flex items-center justify-between relative">
+            {/* LEFT LOGO: HPP logo (spans combined height of strips 2 & 3, stays strictly below black strip) */}
+            <div className="flex items-center shrink-0 z-10">
+              <SmartImage
+                assetKey="brand.hpp"
+                width={82}
+                height={82}
+                className="h-[62px] sm:h-[72px] lg:h-[82px] w-auto object-contain hover:scale-[1.02] transition-transform"
+                alt="HPP Logo"
+              />
+            </div>
+
+            {/* CENTER: Navigation Navbar placed lower down in strip 3 */}
+            <div className="flex-1 flex flex-col justify-end items-center h-full px-2 lg:px-6 pb-2">
+              <nav
+                aria-label="Main Navigation"
+                className="hidden xl:flex items-center justify-center gap-8 lg:gap-10 xl:gap-12 h-12"
+              >
+                {navigationItems.map((item) => {
+                  if (item.isDirectLink && item.href) {
+                    return (
+                      <Link
+                        key={item.id}
+                        href={item.href}
+                        className="text-sm font-medium text-neutral-700 hover:text-[#fe7900] transition-colors py-3"
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  }
+
+                  const isActive =
+                    hoveredItemId === item.id || activeMegaMenuId === item.id;
+
                   return (
-                    <Link
+                    <div
                       key={item.id}
-                      href={item.href}
-                      className="text-sm font-medium text-neutral-700 hover:text-[#fe7900] transition-colors py-3"
+                      onMouseEnter={() =>
+                        handleMouseEnter(item.id, item.isDirectLink)
+                      }
+                      onMouseLeave={handleMouseLeave}
+                      className="relative"
                     >
-                      {item.label}
-                    </Link>
+                      <button
+                        type="button"
+                        aria-expanded={isActive}
+                        onClick={() => {
+                          if (isActive) {
+                            setHoveredItemId(null);
+                            dispatch(closeMegaMenu());
+                          } else {
+                            setHoveredItemId(item.id);
+                            dispatch(openMegaMenu(item.id));
+                          }
+                        }}
+                        className={`text-sm font-medium transition-colors py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded cursor-pointer ${
+                          isActive
+                            ? "text-[#fe7900]"
+                            : "text-neutral-700 hover:text-[#fe7900]"
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    </div>
                   );
-                }
+                })}
+              </nav>
+            </div>
 
-                const isActive =
-                  hoveredItemId === item.id || activeMegaMenuId === item.id;
+            {/* RIGHT LOGO: ISO logo (spans combined height of strips 2 & 3, stays strictly below black strip) */}
+            <div className="flex items-center gap-3 shrink-0 z-10">
+              <SmartImage
+                assetKey="brand.iso"
+                width={82}
+                height={82}
+                className="h-[62px] sm:h-[72px] lg:h-[82px] w-auto object-contain rounded shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:scale-[1.02] transition-transform"
+                alt="ISO Certified Logo"
+              />
 
-                return (
-                  <div
-                    key={item.id}
-                    onMouseEnter={() =>
-                      handleMouseEnter(item.id, item.isDirectLink)
-                    }
-                    onMouseLeave={handleMouseLeave}
-                    className="relative"
-                  >
-                    <button
-                      type="button"
-                      aria-expanded={isActive}
-                      onClick={() => {
-                        if (isActive) {
-                          setHoveredItemId(null);
-                          dispatch(closeMegaMenu());
-                        } else {
-                          setHoveredItemId(item.id);
-                          dispatch(openMegaMenu(item.id));
-                        }
-                      }}
-                      className={`text-sm font-medium transition-colors py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded cursor-pointer ${
-                        isActive
-                          ? "text-[#fe7900]"
-                          : "text-neutral-700 hover:text-[#fe7900]"
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  </div>
-                );
-              })}
-            </nav>
+              {/* Mobile Hamburger Button (< xl screens) */}
+              <button
+                type="button"
+                onClick={() => dispatch(toggleMobileNav())}
+                aria-label="Open mobile menu"
+                className="xl:hidden p-1.5 text-neutral-700 hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded ml-1"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
           </div>
         </div>
 

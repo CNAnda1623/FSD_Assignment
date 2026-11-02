@@ -12,7 +12,7 @@ export default function SiteLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1 pt-14 sm:pt-16 xl:pt-28">{children}</main>
+      <main className="flex-1 pt-[124px] sm:pt-[132px] lg:pt-[138px]">{children}</main>
       <WhatsAppButton />
       <SiteFooter />
       <BackToTop />

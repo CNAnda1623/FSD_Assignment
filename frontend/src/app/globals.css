@@ -70,3 +70,26 @@ body {
 .animate-marquee-slide:hover {
   animation-play-state: paused;
 }
+
+/* Header Black Strip Ticker: Right to Left Marquee */
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 50s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
+}
+
+

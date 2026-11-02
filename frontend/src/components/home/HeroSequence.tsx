@@ -120,7 +120,7 @@ export function HeroSequence() {
       <div className="hidden lg:block relative w-full bg-white">
         {/* ================= INITIAL DESKTOP VIDEO (100% Width, Natural Scroll) ================= */}
         {isDesktop && (
-          <div className="relative w-full h-[calc(100vh-85px)] overflow-hidden bg-black">
+          <div className="relative w-full h-[calc(100vh-138px)] overflow-hidden bg-black">
             <video
               src="/Images/Home/first.mp4"
               autoPlay
@@ -159,8 +159,8 @@ export function HeroSequence() {
           ref={imageTrackRef}
           className="relative w-full h-[400vh] bg-white"
         >
-          {/* Sticky Viewport pinned under navigation header (top 85px) */}
-          <div className="sticky top-[85px] w-full h-[calc(100vh-85px)] overflow-hidden flex items-center justify-center bg-white">
+          {/* Sticky Viewport pinned under navigation header (top 138px) */}
+          <div className="sticky top-[138px] w-full h-[calc(100vh-138px)] overflow-hidden flex items-center justify-center bg-white">
             {/* Dynamically scaling and rounding media container */}
             <div
               style={{

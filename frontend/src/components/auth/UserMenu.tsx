@@ -11,7 +11,11 @@ import {
 import { selectUser, logoutUser } from "@/store/slices/authSlice";
 import { useLogoutMutation } from "@/store/api/authApi";
 
-export function UserMenu() {
+export function UserMenu({
+  variant = "light",
+}: {
+  variant?: "dark" | "light";
+}) {
   const dispatch = useAppDispatch();
   const user = useAppSelector(selectUser);
   const isOpen = useAppSelector(selectAccountMenuOpen);
@@ -69,9 +73,17 @@ export function UserMenu() {
         onClick={() => dispatch(setAccountMenuOpen(!isOpen))}
         aria-expanded={isOpen}
         aria-haspopup="menu"
-        className="flex items-center gap-1.5 text-xs font-semibold tracking-wider text-neutral-800 hover:text-[#fe7900] transition-colors px-2.5 py-1.5 rounded-full hover:bg-neutral-50 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900]"
+        className={`flex items-center gap-1.5 text-xs font-semibold tracking-wider transition-colors px-2.5 py-1 rounded-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] ${
+          variant === "dark"
+            ? "text-neutral-200 hover:text-[#fe7900] hover:bg-white/10"
+            : "text-neutral-800 hover:text-[#fe7900] hover:bg-neutral-50"
+        }`}
       >
-        <User className="w-4 h-4 text-neutral-600" />
+        <User
+          className={`w-3.5 h-3.5 ${
+            variant === "dark" ? "text-neutral-300" : "text-neutral-600"
+          }`}
+        />
         <span className="truncate max-w-[120px] sm:max-w-[160px]">{user.name}</span>
       </button>
 
