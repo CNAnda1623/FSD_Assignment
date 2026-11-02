@@ -324,7 +324,7 @@ export const assets: Record<string, AssetEntry> = {
   "ci.video.safety": {
     id: "C-03a",
     kind: "video",
-    src: "/Images/PV solution/3rdd.webm",
+    src: "/Images/PV solution/3rdd.mp4",
     width: 1200,
     height: 600,
     alt: "Advanced Safety Video",
