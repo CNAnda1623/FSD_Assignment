@@ -16,7 +16,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "C&I PV Solution",
   description:
-    "Enhanced Safety, Increased Returns: Commercial & Industrial PV Solutions by Sungrow.",
+    "Enhanced Safety, Increased Returns: Commercial & Industrial PV Solutions by HIND POWER PROJECT.",
 };
 
 export default function CiPvSolutionPage() {
@@ -214,7 +214,7 @@ export default function CiPvSolutionPage() {
       {/* 10. Contact Us Form */}
       <ContactForm />
 
-      {/* 11. Follow SUNGROW */}
+      {/* 11. Follow HIND POWER PROJECT */}
       <FollowBar />
     </div>
   );

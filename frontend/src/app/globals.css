@@ -14,6 +14,8 @@
 }
 
 :root {
+  --header-h: 70px;
+  --top-bar-h: 38px;
   --color-brand: #fe7900;
   --color-ink: #111111;
   --color-ink-muted: #555555;
@@ -29,7 +31,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-ink);
   background-color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,11 +42,9 @@ body {
   outline-offset: 2px;
 }
 
-/* Reduced motion preference */
+/* Reduced motion preference: respect user comfort without completely killing infinite marquees */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *:not(.ticker__track):not(.animate-marquee-slide) {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -52,44 +52,119 @@ body {
   }
 }
 
-@keyframes marquee-slide {
-  from {
-    transform: translateX(0);
+/* =========================================================================
+   HEADER SLIDE ANIMATION
+   ========================================================================= */
+.header {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  will-change: transform;
+}
+
+.header--hidden {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* =========================================================================
+   TOP BAR TICKER (Pure CSS infinite loop with vendor prefixes & mask)
+   ========================================================================= */
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker {
+  overflow: hidden;
+  margin: 0 50px;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+  mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+}
+
+.ticker__track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: -webkit-max-content;
+  width: max-content;
+  will-change: transform;
+  -webkit-animation: ticker 45s linear infinite;
+  animation: ticker 45s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.ticker__track:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* Slow down rather than freeze on prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    -webkit-animation-duration: 90s !important;
+    animation-duration: 90s !important;
+    -webkit-animation-iteration-count: infinite !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+
+/* Clients / Logo Marquee Slider */
+@-webkit-keyframes marquee-slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-slide {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  width: -webkit-max-content;
   width: max-content;
+  -webkit-animation: marquee-slide 32s linear infinite;
   animation: marquee-slide 32s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .animate-marquee-slide:hover {
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-
-/* Header Black Strip Ticker: Right to Left Marquee */
-@keyframes marquee-rtl {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee-rtl {
-  display: flex;
-  width: max-content;
-  animation: marquee-rtl 50s linear infinite;
-  will-change: transform;
-}
-
-.animate-marquee-rtl:hover {
-  animation-play-state: paused;
-}
-
-

@@ -21,7 +21,7 @@ export function MilestoneSlider() {
           assetKey={milestones.bgAssetKey}
           fill
           className="object-cover object-center brightness-[0.55]"
-          alt="Milestones of Sungrow"
+          alt="Milestones of HIND POWER PROJECT"
         />
         <div className="absolute inset-0 bg-black/45" />
       </div>

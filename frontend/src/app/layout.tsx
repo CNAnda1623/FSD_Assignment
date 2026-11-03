@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import { Montserrat } from "next/font/google";
 import StoreProvider from "@/store/StoreProvider";
@@ -11,13 +11,18 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "Home Page – SUNGROW",
-    template: "%s – SUNGROW",
+    default: "Home Page – HIND POWER PROJECT",
+    template: "%s – HIND POWER PROJECT",
   },
   description:
-    "Clean Power for All - Sungrow is a global leader in PV inverter and energy storage systems.",
+    "Clean Power for All - HIND POWER PROJECT is a global leader in PV inverter and energy storage systems.",
 };
 
 export default function RootLayout({

@@ -66,11 +66,11 @@ export function MobileDrawer() {
 
         <Link href="/" onClick={closeDrawer} className="flex items-center">
           <SmartImage
-            assetKey="brand.logo"
+            assetKey="brand.hpp"
             width={110}
             height={26}
             className="w-28 h-auto object-contain"
-            alt="SUNGROW Logo"
+            alt="Hind Power Project"
           />
         </Link>
 
@@ -122,7 +122,7 @@ export function MobileDrawer() {
             </Link>
 
             <a
-              href="https://www.sungrowpower.com/in/en/search-results"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-full text-neutral-600 hover:text-neutral-900 text-sm"

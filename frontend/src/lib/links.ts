@@ -1,8 +1,8 @@
-const SUNGROW_BASE = "https://www.sungrowpower.com/in/en";
+const EXTERNAL_BASE = "https://hindpowerproject.com";
 
-export function sungrowUrl(path: string): string {
+export function externalUrl(path: string): string {
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-  return `${SUNGROW_BASE}/${cleanPath}`;
+  return `${EXTERNAL_BASE}/${cleanPath}`;
 }
 
 export const internalLinks = {

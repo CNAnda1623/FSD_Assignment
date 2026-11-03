@@ -157,7 +157,7 @@ export function ContactForm() {
                   id="email"
                   type="email"
                   {...register("email")}
-                  placeholder="sungrow@email.com"
+                  placeholder="hindpower@email.com"
                   className="w-full h-12 px-4 rounded-xl bg-neutral-100 text-neutral-800 text-sm border-0 focus:ring-2 focus:ring-[#fe7900] outline-none placeholder:text-neutral-400"
                   aria-invalid={Boolean(errors.email)}
                 />
@@ -224,9 +224,9 @@ export function ContactForm() {
               <div className="space-y-3 pt-2 text-xs text-neutral-500">
                 <p className="leading-relaxed">
                   By submitting this form, you acknowledge that your information
-                  will be processed in accordance with Sungrow&apos;s{" "}
+                  will be processed in accordance with HIND POWER PROJECT&apos;s{" "}
                   <a
-                    href="https://www.sungrowpower.com/in/en/privacy-policy-terms"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#fe7900] underline"
@@ -243,7 +243,7 @@ export function ContactForm() {
                     className="mt-0.5 rounded text-[#fe7900] focus:ring-[#fe7900]"
                   />
                   <span>
-                    I have read and agree to the Sungrow Terms of Use *
+                    I have read and agree to the HIND POWER PROJECT Terms of Use *
                   </span>
                 </label>
                 {errors.termsAccepted && (
@@ -260,7 +260,7 @@ export function ContactForm() {
                   />
                   <span>
                     I would like to receive product updates, news and
-                    promotions from Sungrow.
+                    promotions from HIND POWER PROJECT.
                   </span>
                 </label>
               </div>

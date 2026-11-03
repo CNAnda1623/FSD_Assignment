@@ -103,7 +103,7 @@ export function HeroMobileSlider() {
         <div className="relative w-full h-full flex-shrink-0 bg-[#7ba9d4]">
           <img
             src="/Images/Home/3.jpeg"
-            alt="Sungrow 75 GW+ Bankability Banner"
+            alt="HIND POWER PROJECT 75 GW+ Bankability Banner"
             className="w-full h-full object-cover object-top pointer-events-none select-none"
             loading="eager"
           />
@@ -113,7 +113,7 @@ export function HeroMobileSlider() {
         <div className="relative w-full h-full flex-shrink-0 bg-[#111]">
           <img
             src="/Images/Home/4.jpeg"
-            alt="Sungrow Clean Energy Showcase"
+            alt="HIND POWER PROJECT Clean Energy Showcase"
             className="w-full h-full object-cover object-center pointer-events-none select-none"
             loading="eager"
           />

@@ -12,7 +12,7 @@ import { FollowBar } from "@/components/layout/FollowBar";
 export const metadata: Metadata = {
   title: "Home Page",
   description:
-    "Clean Power for All - Sungrow is a global leader in PV inverter and energy storage systems.",
+    "Clean Power for All - HIND POWER PROJECT is a global leader in PV inverter and energy storage systems.",
 };
 
 export default function HomePage() {

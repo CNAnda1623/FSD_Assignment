@@ -62,23 +62,29 @@ export function HeroSequence() {
   }, [isDesktop]);
 
   // Phase 1: Card Container Progressive Scaling (0.02 -> 0.22)
-  let cardWidth = "100vw";
-  let cardHeight = "calc(100vh - 85px)";
+  // When scrolling from the video into the image sequence, the image starts 100% full-screen (no gaps)
+  // and smoothly scales down into a rounded card as the user continues scrolling.
+  let cardWidth = "100%";
+  let cardHeight = "100%";
   let cardBorderRadius = "0px";
+  let cardMaxWidth = "100%";
 
   if (progress <= 0.02) {
-    cardWidth = "100vw";
-    cardHeight = "calc(100vh - 85px)";
+    cardWidth = "100%";
+    cardHeight = "100%";
     cardBorderRadius = "0px";
+    cardMaxWidth = "100%";
   } else if (progress >= 0.22) {
     cardWidth = "80vw";
     cardHeight = "calc(100vh - 120px)";
     cardBorderRadius = "32px";
+    cardMaxWidth = "1680px";
   } else {
     const t = (progress - 0.02) / (0.22 - 0.02);
-    cardWidth = `${100 - t * 20}vw`;
-    cardHeight = `calc(100vh - ${85 + t * 35}px)`;
+    cardWidth = `calc(100% - ${t * 20}vw)`;
+    cardHeight = `calc(100% - ${t * 120}px)`;
     cardBorderRadius = `${t * 32}px`;
+    cardMaxWidth = t > 0.5 ? "1680px" : "100%";
   }
 
   // Layer 2: Forest Parallax Y (0.22 -> 0.44)
@@ -118,57 +124,62 @@ export function HeroSequence() {
 
       {/* 2. Desktop Homepage: Separate Video and Scroll-Driven Image Sequence (>=1024px) */}
       <div className="hidden lg:block relative w-full bg-white">
-        {/* ================= INITIAL DESKTOP VIDEO (100% Width, Natural Scroll) ================= */}
-        {isDesktop && (
-          <div className="relative w-full h-[calc(100vh-138px)] overflow-hidden bg-black">
-            <video
-              src="/Images/Home/first.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/15 pointer-events-none" />
+        {/* ================= INITIAL DESKTOP VIDEO (100% Width, Exact Viewport Fit) ================= */}
+        <div
+          className="relative w-full overflow-hidden bg-black"
+          style={{
+            height: "calc(100vh - (var(--top-bar-h, 38px) + var(--header-h, 70px)))",
+            minHeight: "calc(100svh - (var(--top-bar-h, 38px) + var(--header-h, 70px)))",
+          }}
+        >
+          <video
+            src="/Images/Home/first.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
-            {/* Subtle Scroll Hint */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center text-white/80 animate-bounce pointer-events-none">
-              <span className="text-[11px] uppercase tracking-widest font-light mb-1.5 drop-shadow">
-                Scroll to explore
-              </span>
-              <svg
-                className="w-5 h-5 text-white/80 drop-shadow"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
+          {/* Subtle Scroll Hint */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center text-white/80 animate-bounce pointer-events-none">
+            <span className="text-[11px] uppercase tracking-widest font-light mb-1.5 drop-shadow">
+              Scroll to explore
+            </span>
+            <svg
+              className="w-5 h-5 text-white/80 drop-shadow"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </div>
-        )}
+        </div>
 
         {/* ================= SEPARATE IMAGE ANIMATION TRACK ================= */}
         <div
           ref={imageTrackRef}
           className="relative w-full h-[400vh] bg-white"
         >
-          {/* Sticky Viewport pinned under navigation header (top 138px) */}
-          <div className="sticky top-[138px] w-full h-[calc(100vh-138px)] overflow-hidden flex items-center justify-center bg-white">
+          {/* Sticky Viewport: pinned at top: 0, fills viewport all the way up (no gap) */}
+          <div className="sticky top-0 w-full h-screen min-h-[100svh] min-h-[100dvh] overflow-hidden flex items-center justify-center bg-white">
             {/* Dynamically scaling and rounding media container */}
             <div
               style={{
                 width: cardWidth,
                 height: cardHeight,
                 borderRadius: cardBorderRadius,
+                maxWidth: cardMaxWidth,
               }}
-              className="relative max-w-[1680px] overflow-hidden bg-black shadow-none will-change-[width,height,border-radius]"
+              className="relative overflow-hidden bg-black shadow-none will-change-[width,height,border-radius]"
             >
               {/* ================= LAYER 2: 2ND.JPG (GATHERING GOODWILL - FIRST IMAGE) ================= */}
               <div
@@ -187,7 +198,7 @@ export function HeroSequence() {
 
                 {/* Centered Typography overlay */}
                 <div className="absolute inset-0 flex justify-center pt-[16vh] lg:pt-[20vh] px-4 pointer-events-none">
-                  <h1 className="text-white text-2xl sm:text-3xl md:text-[36px] font-medium tracking-wide uppercase text-center whitespace-nowrap drop-shadow-md">
+                  <h1 className="text-white text-2xl sm:text-3xl md:text-[36px] font-medium tracking-wide uppercase text-center whitespace-normal sm:whitespace-nowrap drop-shadow-md">
                     GATHERING GOODWILL FOR A BETTER WORLD
                   </h1>
                 </div>
@@ -200,7 +211,7 @@ export function HeroSequence() {
               >
                 <img
                   src="/Images/Home/3.jpeg"
-                  alt="Sungrow 75 GW+ Bankability Banner"
+                  alt="HIND POWER PROJECT 75 GW+ Bankability Banner"
                   className="w-full h-full object-cover object-top pointer-events-none select-none"
                   loading="eager"
                 />
@@ -213,7 +224,7 @@ export function HeroSequence() {
               >
                 <img
                   src="/Images/Home/4.jpeg"
-                  alt="Sungrow Clean Energy Showcase"
+                  alt="HIND POWER PROJECT Clean Energy Showcase"
                   className="w-full h-full object-cover object-center pointer-events-none select-none"
                   loading="eager"
                 />

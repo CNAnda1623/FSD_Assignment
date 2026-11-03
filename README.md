@@ -1,6 +1,6 @@
-# Sungrow Next.js Web Application
+# HIND POWER PROJECT Next.js Web Application
 
-A pixel-faithful, responsive recreation of the Sungrow web platform built with the Next.js App Router, React 19, TypeScript, Tailwind CSS, and Redux Toolkit.
+A pixel-faithful, responsive recreation of the HIND POWER PROJECT web platform built with the Next.js App Router, React 19, TypeScript, Tailwind CSS, and Redux Toolkit.
 
 ---
 

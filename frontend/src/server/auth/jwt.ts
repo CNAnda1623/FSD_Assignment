@@ -2,12 +2,12 @@ import { SignJWT, jwtVerify } from "jose";
 
 const ACCESS_SECRET = new TextEncoder().encode(
   process.env.JWT_ACCESS_SECRET ||
-    "sungrow_jwt_access_secret_key_minimum_32_characters_dev_2026_super_safe"
+    "hpp_jwt_access_secret_key_minimum_32_characters_dev_2026_super_safe"
 );
 
 const REFRESH_SECRET = new TextEncoder().encode(
   process.env.JWT_REFRESH_SECRET ||
-    "sungrow_jwt_refresh_secret_key_minimum_32_characters_dev_2026_super_safe"
+    "hpp_jwt_refresh_secret_key_minimum_32_characters_dev_2026_super_safe"
 );
 
 export interface TokenUserPayload {

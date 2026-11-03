@@ -7,7 +7,7 @@ export function generateVerificationCode(): string {
 export function hashCode(code: string, purpose: string, email: string): string {
   const secret =
     process.env.CODE_HMAC_SECRET ||
-    "sungrow_code_hmac_secret_key_minimum_32_characters_dev_2026";
+    "hpp_code_hmac_secret_key_minimum_32_characters_dev_2026";
   const normalizedEmail = email.trim().toLowerCase();
   return crypto
     .createHmac("sha256", secret)

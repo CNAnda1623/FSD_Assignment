@@ -8,7 +8,7 @@ const envSchema = z.object({
   CODE_HMAC_SECRET: z.string().min(32).optional(),
   APP_ORIGIN: z.string().url().optional().default("http://localhost:3000"),
   RESEND_API_KEY: z.string().optional(),
-  EMAIL_FROM: z.string().optional().default("no-reply@sungrowpower.com"),
+  EMAIL_FROM: z.string().optional().default("no-reply@hindpowerproject.com"),
 });
 
 export const env = envSchema.parse(process.env);

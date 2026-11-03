@@ -15,9 +15,9 @@ export async function sendEmailCode(
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: process.env.EMAIL_FROM || "no-reply@sungrowpower.com",
+          from: process.env.EMAIL_FROM || "no-reply@hindpowerproject.com",
           to: normalizedEmail,
-          subject: `Your SUNGROW Verification Code: ${code}`,
+          subject: `Your HIND POWER PROJECT Verification Code: ${code}`,
           html: `<p>Your verification code for <strong>${purpose}</strong> is: <h2 style="color:#fe7900;">${code}</h2></p><p>This code expires in 10 minutes.</p>`,
         }),
       });
@@ -32,7 +32,7 @@ export async function sendEmailCode(
 
   // Dev Console Transport (prints clearly to server terminal)
   console.log(`\n======================================================`);
-  console.log(`⚡ [SUNGROW DEV CONSOLE EMAIL TRANSPORT] ⚡`);
+  console.log(`⚡ [HPP DEV CONSOLE EMAIL TRANSPORT] ⚡`);
   console.log(`To:               ${normalizedEmail}`);
   console.log(`Purpose:          ${purpose}`);
   console.log(`Verification Code: ${code}`);

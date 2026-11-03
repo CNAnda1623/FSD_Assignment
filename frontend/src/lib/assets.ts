@@ -15,10 +15,10 @@ export const assets: Record<string, AssetEntry> = {
   "brand.logo": {
     id: "X-01a",
     kind: "icon",
-    src: "/Images/Home/logo.svg",
+    src: "/Images/Home/HPP logo.png",
     width: 140,
     height: 32,
-    alt: "SUNGROW",
+    alt: "Hind Power Project",
   },
   "brand.flag": {
     id: "X-01b",
@@ -125,7 +125,7 @@ export const assets: Record<string, AssetEntry> = {
     src: "/Images/Home/3.jpeg",
     width: 1400,
     height: 600,
-    alt: "Sungrow No.1 Inverter Bankability - 75 GW+",
+    alt: "HPP No.1 Inverter Bankability - 75 GW+",
   },
   "home.stats.icon1": {
     id: "H-03a",
@@ -522,7 +522,7 @@ export const assets: Record<string, AssetEntry> = {
     src: "/Images/residential_PV_solution/9.jpg",
     width: 7680,
     height: 4320,
-    alt: "Sungrow Home Energy System",
+    alt: "HPP Home Energy System",
   },
   "residential.case.2": {
     id: "R-06b",
@@ -622,7 +622,7 @@ export const assets: Record<string, AssetEntry> = {
     src: "/Images/about us/3.webp",
     width: 1920,
     height: 900,
-    alt: "Milestones of Sungrow",
+    alt: "Milestones of HIND POWER PROJECT",
   },
 
   // Sustainability
@@ -824,7 +824,7 @@ export const assets: Record<string, AssetEntry> = {
     src: "/Images/sustainability/latest news sustainability report.webp",
     width: 400,
     height: 260,
-    alt: "Sungrow Releases 2024 Sustainability Report",
+    alt: "HPP Releases 2024 Sustainability Report",
   },
   "sustainability.news.2": {
     id: "S-07b",
@@ -832,7 +832,7 @@ export const assets: Record<string, AssetEntry> = {
     src: "/Images/sustainability/a195e679-bcaf-4906-b017-0623ac53ef0b.webp",
     width: 400,
     height: 260,
-    alt: "Sungrow Ranks in Global Top 5% EcoVadis Gold",
+    alt: "HPP Ranks in Global Top 5% EcoVadis Gold",
   },
   "sustainability.news.3": {
     id: "S-07c",

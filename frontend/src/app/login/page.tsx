@@ -108,18 +108,18 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen w-full bg-[#d9d9d9] flex flex-col justify-between items-center py-4 sm:py-6 px-4 font-sans select-none">
-      {/* 1. Header: Centered SUNGROW Logo */}
+      {/* 1. Header: Centered HPP Logo */}
       <header className="w-full flex justify-center pt-1 pb-2 sm:pb-3">
         <Link
           href="/"
           className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded transition-transform hover:scale-105 duration-200"
         >
           <SmartImage
-            assetKey="brand.logo"
+            assetKey="brand.hpp"
             width={160}
             height={36}
             className="w-36 sm:w-42 h-auto object-contain"
-            alt="SUNGROW Logo"
+            alt="Hind Power Project"
             priority
           />
         </Link>
@@ -168,7 +168,7 @@ export default function LoginPage() {
                 setEmail(e.target.value);
                 setErrorMsg(null);
               }}
-              placeholder="sungrow@email.com"
+              placeholder="hindpower@email.com"
               className="w-full pb-1.5 pt-0.5 bg-transparent border-0 border-b border-[#b2b2b2] text-sm sm:text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-[#fe7900] transition-colors rounded-none"
             />
           </div>
@@ -350,12 +350,12 @@ export default function LoginPage() {
         </form>
       </div>
 
-      {/* 3. Page Footer: 2025 SUNGROW, Privacy, Contact US */}
+      {/* 3. Page Footer: 2025 HIND POWER PROJECT, Privacy, Contact US */}
       <footer className="w-full text-center py-2 sm:py-3 text-[11px] sm:text-xs text-neutral-600 font-normal">
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          <span>2025 SUNGROW. All Rights Reserved</span>
+          <span>2025 HIND POWER PROJECT. All Rights Reserved</span>
           <a
-            href="https://www.sungrowpower.com/in/en/privacy-policy-terms"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-black transition-colors"
@@ -363,7 +363,7 @@ export default function LoginPage() {
             Privacy
           </a>
           <a
-            href="https://www.sungrowpower.com/in/en/about-us/contact-us"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-black transition-colors"

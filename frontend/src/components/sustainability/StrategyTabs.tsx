@@ -84,16 +84,16 @@ export function StrategyTabs() {
 
             <div className="flex flex-wrap items-center gap-4">
               <Button
-                href="https://www.sungrowpower.com/in/en/sustainability"
-                isExternal={true}
+                href="/sustainability"
+                isExternal={false}
                 variant="solid-orange"
                 size="sm"
               >
                 Learn More About Our Actions
               </Button>
               <Button
-                href="https://www.sungrowpower.com/in/en/sustainability"
-                isExternal={true}
+                href="/sustainability"
+                isExternal={false}
                 variant="translucent-dark"
                 size="sm"
               >

@@ -49,19 +49,19 @@ export function SiteFooter() {
           <div className="flex items-center gap-4">
             <Link href="/" className="inline-block">
               <SmartImage
-                assetKey="brand.logo"
+                assetKey="brand.hpp"
                 width={100}
                 height={22}
                 className="w-24 h-auto object-contain opacity-90"
-                alt="SUNGROW Logo"
+                alt="Hind Power Project"
               />
             </Link>
-            <span>© 2026 SUNGROW. All Rights Reserved.</span>
+            <span>© 2026 HIND POWER PROJECT. All Rights Reserved.</span>
           </div>
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.sungrowpower.com/in/en/privacy-policy-terms"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#fe7900] transition-colors"
@@ -70,7 +70,7 @@ export function SiteFooter() {
             </a>
             <span>·</span>
             <a
-              href="https://www.sungrowpower.com/in/en/disclaimer"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#fe7900] transition-colors"

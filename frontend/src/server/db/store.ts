@@ -37,7 +37,7 @@ interface DBState {
   tokens: Record<string, RefreshTokenRecord>;
 }
 
-const DB_FILE = path.join(process.cwd(), ".sungrow_store.json");
+const DB_FILE = path.join(process.cwd(), ".hpp_store.json");
 
 function loadFromDisk(): DBState {
   try {
@@ -62,14 +62,14 @@ function saveToDisk(state: DBState) {
 // Global in-memory cache to survive HMR in dev
 declare global {
   // eslint-disable-next-line no-var
-  var __sungrowDbState: DBState | undefined;
+  var __hppDbState: DBState | undefined;
 }
 
-if (!global.__sungrowDbState) {
-  global.__sungrowDbState = loadFromDisk();
+if (!global.__hppDbState) {
+  global.__hppDbState = loadFromDisk();
 
   // Seed demo user if no users exist
-  const existingUsers = Object.keys(global.__sungrowDbState.users);
+  const existingUsers = Object.keys(global.__hppDbState.users);
   if (existingUsers.length === 0) {
     hashPassword("Password123!").then((hashed) => {
       const seedUser: UserRecord = {
@@ -82,15 +82,15 @@ if (!global.__sungrowDbState) {
         role: "For Home",
         createdAt: new Date().toISOString(),
       };
-      if (global.__sungrowDbState) {
-        global.__sungrowDbState.users["jane@example.com"] = seedUser;
-        saveToDisk(global.__sungrowDbState);
+      if (global.__hppDbState) {
+        global.__hppDbState.users["jane@example.com"] = seedUser;
+        saveToDisk(global.__hppDbState);
       }
     });
   }
 }
 
-const state = global.__sungrowDbState;
+const state = global.__hppDbState;
 
 export async function findUserByEmail(email: string): Promise<UserRecord | null> {
   const normalized = email.trim().toLowerCase();

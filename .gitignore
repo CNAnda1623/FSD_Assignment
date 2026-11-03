@@ -19,5 +19,5 @@ build/
 *.tsbuildinfo
 
 # local test & db files
-.sungrow_store.json
+.hpp_store.json
 .last_code.json

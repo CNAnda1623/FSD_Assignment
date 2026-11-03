@@ -12,7 +12,7 @@ import { MilestoneSlider } from "@/components/about/MilestoneSlider";
 export const metadata: Metadata = {
   title: "Brand Story",
   description:
-    "Explore the Brand Story of Sungrow - Global Leader of Clean Energy Conversion Technology.",
+    "Explore the Brand Story of HIND POWER PROJECT - Global Leader of Clean Energy Conversion Technology.",
 };
 
 export default function BrandStoryPage() {

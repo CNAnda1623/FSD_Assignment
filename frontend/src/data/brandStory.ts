@@ -1,4 +1,4 @@
-import { sungrowUrl } from "@/lib/links";
+import { externalUrl } from "@/lib/links";
 
 export const brandStoryData = {
   hero: {
@@ -15,7 +15,7 @@ export const brandStoryData = {
   leader: {
     heading: "To Be the Global Leader of Clean Energy Conversion Technology",
     description:
-      "At Sungrow, we are dedicated to promoting the development and application of clean power conversion systems, bridging the gap between innovative clean power technology and everyday needs to realize a zero-carbon world.",
+      "At HIND POWER PROJECT, we are dedicated to promoting the development and application of clean power conversion systems, bridging the gap between innovative clean power technology and everyday needs to realize a zero-carbon world.",
   },
 
   capabilities: [
@@ -24,10 +24,10 @@ export const brandStoryData = {
       name: "Solar",
       iconAssetKey: "brand.card.solar",
       links: [
-        { label: "PV System", href: sungrowUrl("utility/pv-system") },
-        { label: "Floating PV System", href: sungrowUrl("utility/floating-pv") },
-        { label: "Smart Energy Products", href: sungrowUrl("products/smart-energy") },
-        { label: "Sungrow Renewables", href: sungrowUrl("renewables") },
+        { label: "PV System", href: externalUrl("utility/pv-system") },
+        { label: "Floating PV System", href: externalUrl("utility/floating-pv") },
+        { label: "Smart Energy Products", href: externalUrl("products/smart-energy") },
+        { label: "HPP Renewables", href: externalUrl("renewables") },
       ],
     },
     {
@@ -35,7 +35,7 @@ export const brandStoryData = {
       name: "Wind",
       iconAssetKey: "brand.card.wind",
       links: [
-        { label: "Wind Products & Solutions", href: sungrowUrl("utility/wind") },
+        { label: "Wind Products & Solutions", href: externalUrl("utility/wind") },
       ],
     },
     {
@@ -43,8 +43,8 @@ export const brandStoryData = {
       name: "Storage System",
       iconAssetKey: "brand.card.storage",
       links: [
-        { label: "Storage System", href: sungrowUrl("utility/storage-system") },
-        { label: "Smart Energy Products", href: sungrowUrl("products/smart-energy") },
+        { label: "Storage System", href: externalUrl("utility/storage-system") },
+        { label: "Smart Energy Products", href: externalUrl("products/smart-energy") },
       ],
     },
     {
@@ -52,8 +52,8 @@ export const brandStoryData = {
       name: "Electrification",
       iconAssetKey: "brand.card.electrification",
       links: [
-        { label: "E-Power", href: sungrowUrl("e-power") },
-        { label: "EV Charger", href: sungrowUrl("products/ev-charger") },
+        { label: "E-Power", href: externalUrl("e-power") },
+        { label: "EV Charger", href: externalUrl("products/ev-charger") },
       ],
     },
     {
@@ -61,7 +61,7 @@ export const brandStoryData = {
       name: "Hydrogen",
       iconAssetKey: "brand.card.hydrogen",
       links: [
-        { label: "Hydrogen", href: sungrowUrl("utility/hydrogen") },
+        { label: "Hydrogen", href: externalUrl("utility/hydrogen") },
       ],
     },
   ],
@@ -77,12 +77,12 @@ export const brandStoryData = {
   together: {
     heading: "Together, We Build A Sustainable Future",
     description:
-      "Guided by innovation and driven by a shared responsibility to our planet, Sungrow works alongside partners and communities to inspire lasting environmental progress.",
+      "Guided by innovation and driven by a shared responsibility to our planet, HIND POWER PROJECT works alongside partners and communities to inspire lasting environmental progress.",
     assetKey: "brand.together",
   },
 
   milestones: {
-    heading: "Milestones of Sungrow",
+    heading: "Milestones of HIND POWER PROJECT",
     bgAssetKey: "brand.milestones.bg",
     items: [
       {

@@ -1,4 +1,4 @@
-import { internalLinks, sungrowUrl } from "@/lib/links";
+import { internalLinks, externalUrl } from "@/lib/links";
 
 export interface NavLink {
   label: string;
@@ -34,11 +34,11 @@ export const navigationItems: MegaMenuItem[] = [
           },
           {
             label: "Residential PV Solution",
-            href: sungrowUrl("solutions-residential"),
+            href: externalUrl("solutions-residential"),
           },
           {
             label: "Cases & Stories",
-            href: sungrowUrl("cases-homeowners"),
+            href: externalUrl("cases-homeowners"),
           },
         ],
       },
@@ -47,11 +47,11 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "Home Energy Estimator",
-            href: sungrowUrl("energy-estimator"),
+            href: externalUrl("energy-estimator"),
           },
           {
             label: "Find a Distributor",
-            href: sungrowUrl("find-a-distributor"),
+            href: externalUrl("find-a-distributor"),
           },
         ],
       },
@@ -60,27 +60,27 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "For Home Support",
-            href: sungrowUrl("support/home"),
+            href: externalUrl("support/home"),
           },
           {
             label: "Product Documentation",
-            href: sungrowUrl("support/documentation"),
+            href: externalUrl("support/documentation"),
           },
           {
             label: "iSolarCloud",
-            href: sungrowUrl("isolarcloud"),
+            href: externalUrl("isolarcloud"),
           },
           {
             label: "iEnergyCharge",
-            href: sungrowUrl("ienergycharge"),
+            href: externalUrl("ienergycharge"),
           },
           {
             label: "FAQs",
-            href: sungrowUrl("faqs"),
+            href: externalUrl("faqs"),
           },
           {
             label: "Warranty",
-            href: sungrowUrl("warranty"),
+            href: externalUrl("warranty"),
           },
         ],
       },
@@ -100,11 +100,11 @@ export const navigationItems: MegaMenuItem[] = [
           },
           {
             label: "C&I PV+ESS+EV Charging Solution",
-            href: sungrowUrl("solution/ci-pv-ess-ev-charging"),
+            href: externalUrl("solution/ci-pv-ess-ev-charging"),
           },
           {
             label: "Cases & Stories",
-            href: sungrowUrl("cases-business"),
+            href: externalUrl("cases-business"),
           },
         ],
       },
@@ -113,7 +113,7 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "Find a Distributor",
-            href: sungrowUrl("find-a-distributor"),
+            href: externalUrl("find-a-distributor"),
           },
         ],
       },
@@ -122,23 +122,23 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "For Business Support",
-            href: sungrowUrl("support/business"),
+            href: externalUrl("support/business"),
           },
           {
             label: "Product Documentation",
-            href: sungrowUrl("support/documentation"),
+            href: externalUrl("support/documentation"),
           },
           {
             label: "iSolarCloud",
-            href: sungrowUrl("isolarcloud"),
+            href: externalUrl("isolarcloud"),
           },
           {
             label: "FAQs",
-            href: sungrowUrl("faqs"),
+            href: externalUrl("faqs"),
           },
           {
             label: "Warranty",
-            href: sungrowUrl("warranty"),
+            href: externalUrl("warranty"),
           },
         ],
       },
@@ -149,15 +149,15 @@ export const navigationItems: MegaMenuItem[] = [
     label: "Service & Support",
     columns: [
       {
-        title: "Sungrow Service",
+        title: "HPP Service",
         links: [
           {
             label: "Service Brand",
-            href: sungrowUrl("service-brand"),
+            href: externalUrl("service-brand"),
           },
           {
             label: "Service Stories",
-            href: sungrowUrl("service-stories"),
+            href: externalUrl("service-stories"),
           },
         ],
       },
@@ -166,15 +166,15 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "Installers Support",
-            href: sungrowUrl("support/installer"),
+            href: externalUrl("support/installer"),
           },
           {
             label: "Homeowners Support",
-            href: sungrowUrl("support/home"),
+            href: externalUrl("support/home"),
           },
           {
             label: "Business Owners Support",
-            href: sungrowUrl("support/business"),
+            href: externalUrl("support/business"),
           },
         ],
       },
@@ -183,15 +183,15 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "Product Documentation",
-            href: sungrowUrl("support/documentation"),
+            href: externalUrl("support/documentation"),
           },
           {
             label: "FAQs",
-            href: sungrowUrl("faqs"),
+            href: externalUrl("faqs"),
           },
           {
             label: "Warranty",
-            href: sungrowUrl("warranty"),
+            href: externalUrl("warranty"),
           },
         ],
       },
@@ -208,7 +208,7 @@ export const navigationItems: MegaMenuItem[] = [
     label: "About Us",
     columns: [
       {
-        title: "About Sungrow",
+        title: "About HIND POWER PROJECT",
         links: [
           {
             label: "Brand Story",
@@ -216,8 +216,8 @@ export const navigationItems: MegaMenuItem[] = [
             isLocal: true,
           },
           {
-            label: "Contact Sungrow",
-            href: sungrowUrl("about-us/contact-us"),
+            label: "Contact HIND POWER PROJECT",
+            href: externalUrl("about-us/contact-us"),
           },
         ],
       },
@@ -226,19 +226,19 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "News",
-            href: sungrowUrl("news"),
+            href: externalUrl("news"),
           },
           {
             label: "Events",
-            href: sungrowUrl("events"),
+            href: externalUrl("events"),
           },
           {
-            label: "Sungrow Campaign",
-            href: sungrowUrl("campaign"),
+            label: "HPP Campaign",
+            href: externalUrl("campaign"),
           },
           {
             label: "White Paper",
-            href: sungrowUrl("white-paper"),
+            href: externalUrl("white-paper"),
           },
         ],
       },
@@ -247,23 +247,23 @@ export const navigationItems: MegaMenuItem[] = [
         links: [
           {
             label: "Overview",
-            href: sungrowUrl("investors/overview"),
+            href: externalUrl("investors/overview"),
           },
           {
             label: "Corporate Governance",
-            href: sungrowUrl("investors/governance"),
+            href: externalUrl("investors/governance"),
           },
           {
             label: "Financial Reports",
-            href: sungrowUrl("investors/reports"),
+            href: externalUrl("investors/reports"),
           },
           {
             label: "Career",
-            href: sungrowUrl("about/career"),
+            href: externalUrl("about/career"),
           },
           {
-            label: "Sungrow Foundation",
-            href: sungrowUrl("foundation"),
+            label: "HPP Foundation",
+            href: externalUrl("foundation"),
           },
         ],
       },

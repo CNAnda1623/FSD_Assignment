@@ -1,4 +1,4 @@
-import { sungrowUrl } from "@/lib/links";
+import { externalUrl } from "@/lib/links";
 
 export const sustainabilityData = {
   hero: {
@@ -13,7 +13,7 @@ export const sustainabilityData = {
   ],
 
   targets: {
-    heading: "Sungrow Climate Targets",
+    heading: "HIND POWER PROJECT Climate Targets",
     items: [
       {
         id: "t1",
@@ -135,37 +135,37 @@ export const sustainabilityData = {
       {
         id: "r2025",
         eyebrow: "Enterprise",
-        title: "SUNGROW 2025 SUSTAINABILITY REPORT",
+        title: "HIND POWER PROJECT 2025 SUSTAINABILITY REPORT",
         assetKey: "sustainability.report.2025",
-        downloadUrl: sungrowUrl("sustainability/report-2025.pdf"),
+        downloadUrl: externalUrl("sustainability/report-2025.pdf"),
       },
       {
         id: "r2024",
         eyebrow: "Enterprise",
-        title: "SUNGROW 2024 SUSTAINABILITY REPORT",
+        title: "HIND POWER PROJECT 2024 SUSTAINABILITY REPORT",
         assetKey: "sustainability.report.2024",
-        downloadUrl: sungrowUrl("sustainability/report-2024.pdf"),
+        downloadUrl: externalUrl("sustainability/report-2024.pdf"),
       },
       {
         id: "r2023",
         eyebrow: "Enterprise",
-        title: "SUNGROW 2023 SUSTAINABILITY REPORT",
+        title: "HIND POWER PROJECT 2023 SUSTAINABILITY REPORT",
         assetKey: "sustainability.report.2023",
-        downloadUrl: sungrowUrl("sustainability/report-2023.pdf"),
+        downloadUrl: externalUrl("sustainability/report-2023.pdf"),
       },
       {
         id: "r2022",
         eyebrow: "Enterprise",
-        title: "SUNGROW 2022 SUSTAINABILITY REPORT",
+        title: "HIND POWER PROJECT 2022 SUSTAINABILITY REPORT",
         assetKey: "sustainability.report.2022",
-        downloadUrl: sungrowUrl("sustainability/report-2022.pdf"),
+        downloadUrl: externalUrl("sustainability/report-2022.pdf"),
       },
       {
         id: "r2021",
         eyebrow: "Enterprise",
-        title: "SUNGROW 2021 CSR REPORT",
+        title: "HIND POWER PROJECT 2021 CSR REPORT",
         assetKey: "sustainability.report.2021",
-        downloadUrl: sungrowUrl("sustainability/report-2021.pdf"),
+        downloadUrl: externalUrl("sustainability/report-2021.pdf"),
       },
     ],
     policyItems: [
@@ -174,26 +174,26 @@ export const sustainabilityData = {
         eyebrow: "Policy",
         title: "EQUITY, INCLUSION, AND DIVERSITY POLICY",
         assetKey: "sustainability.policy.equity",
-        downloadUrl: sungrowUrl("sustainability/policy-eid.pdf"),
+        downloadUrl: externalUrl("sustainability/policy-eid.pdf"),
       },
       {
         id: "p2",
         eyebrow: "Policy",
         title: "ENVIRONMENTAL MANAGEMENT POLICY",
         assetKey: "sustainability.policy.env",
-        downloadUrl: sungrowUrl("sustainability/policy-env.pdf"),
+        downloadUrl: externalUrl("sustainability/policy-env.pdf"),
       },
       {
         id: "p3",
         eyebrow: "Policy",
         title: "BIODIVERSITY CONSERVATION POLICY",
         assetKey: "sustainability.policy.bio",
-        downloadUrl: sungrowUrl("sustainability/policy-bio.pdf"),
+        downloadUrl: externalUrl("sustainability/policy-bio.pdf"),
       },
     ],
     cta: {
       label: "Explore More",
-      href: sungrowUrl("sustainability/reports"),
+      href: externalUrl("sustainability/reports"),
     },
   },
 
@@ -231,23 +231,23 @@ export const sustainabilityData = {
       {
         tag: "Sustainability",
         title:
-          "From Decade to Decades, Sustainability on the Way: Sungrow Releases its 2024 Sustainability Report.",
+          "From Decade to Decades, Sustainability on the Way: HIND POWER PROJECT Releases its 2024 Sustainability Report.",
         assetKey: "sustainability.news.1",
-        href: sungrowUrl("newsdetail/sustainability-report-2024"),
+        href: externalUrl("newsdetail/sustainability-report-2024"),
       },
       {
         tag: "Sustainability",
         title:
-          "Sungrow Ranks in the Global Top 5%, Awarded EcoVadis Gold Medal",
+          "HIND POWER PROJECT Ranks in the Global Top 5%, Awarded EcoVadis Gold Medal",
         assetKey: "sustainability.news.2",
-        href: sungrowUrl("newsdetail/ecovadis-gold-2025"),
+        href: externalUrl("newsdetail/ecovadis-gold-2025"),
       },
       {
         tag: "Sustainability",
         title:
-          "Sungrow Is listed in Boston Consulting Group's Global-Challenger Climate Pioneers",
+          "HIND POWER PROJECT Is listed in Boston Consulting Group's Global-Challenger Climate Pioneers",
         assetKey: "sustainability.news.3",
-        href: sungrowUrl("newsdetail/bcg-climate-pioneers"),
+        href: externalUrl("newsdetail/bcg-climate-pioneers"),
       },
     ],
   },
@@ -256,7 +256,7 @@ export const sustainabilityData = {
     heading: "Contact Us",
     description:
       "Your insights drive our progress. Contact our ESG team to share feedback, ask questions, or explore partnerships for a greener tomorrow.",
-    email: "esg@sungrowpower.com",
+    email: "esg@hindpowerproject.com",
     assetKey: "sustainability.contact.banner",
   },
 };

@@ -1,4 +1,4 @@
-import { sungrowUrl } from "@/lib/links";
+import { externalUrl } from "@/lib/links";
 
 export const residentialData = {
   hero: {
@@ -92,21 +92,21 @@ export const residentialData = {
         id: "r-c1",
         tag: "Homeowners",
         title:
-          "Sungrow Home Energy System: Smart Way to Reduce Your Electricity Bills",
+          "HIND POWER PROJECT Home Energy System: Smart Way to Reduce Your Electricity Bills",
         assetKey: "residential.case.1",
-        href: sungrowUrl("cases/home-energy-reduce-bills"),
+        href: externalUrl("cases/home-energy-reduce-bills"),
       },
       {
         id: "r-c2",
         tag: "Homeowners",
-        title: "A Decade of Trust: Why This Family Chose Sungrow Solar Again",
+        title: "A Decade of Trust: Why This Family Chose HIND POWER PROJECT Solar Again",
         assetKey: "residential.case.2",
-        href: sungrowUrl("cases/decade-of-trust"),
+        href: externalUrl("cases/decade-of-trust"),
       },
     ],
     cta: {
       label: "Explore More",
-      href: sungrowUrl("cases-homeowners"),
+      href: externalUrl("cases-homeowners"),
     },
   },
 
@@ -117,8 +117,8 @@ export const residentialData = {
       category: "Smart Energy Management Platform",
       name: "iSolarCloud",
       assetKey: "residential.product",
-      learnMoreUrl: sungrowUrl("products/isolarcloud"),
-      docUrl: sungrowUrl("support/documentation/isolarcloud"),
+      learnMoreUrl: externalUrl("products/isolarcloud"),
+      docUrl: externalUrl("support/documentation/isolarcloud"),
     },
   },
 };

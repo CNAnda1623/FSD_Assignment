@@ -7,7 +7,7 @@ export function FollowBar() {
     <div className="w-full bg-[#f8f8f8] border-t border-neutral-200/60 py-6">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-neutral-600">
-          Follow SUNGROW
+          Follow HIND POWER PROJECT
         </span>
 
         <div className="flex items-center gap-6">
@@ -17,7 +17,7 @@ export function FollowBar() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Follow Sungrow on ${item.name}`}
+              aria-label={`Follow HIND POWER PROJECT on ${item.name}`}
               className="p-1 text-neutral-400 hover:text-[#fe7900] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded"
             >
               <SmartImage

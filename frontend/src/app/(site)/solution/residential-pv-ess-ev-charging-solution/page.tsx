@@ -14,7 +14,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Residential PV + ESS + EV Charging Solution",
   description:
-    "Clean Power, Carbon-Free Life: All-in-one Residential Solar, Storage, and EV Charging by Sungrow.",
+    "Clean Power, Carbon-Free Life: All-in-one Residential Solar, Storage, and EV Charging by HIND POWER PROJECT.",
 };
 
 export default function ResidentialSolutionPage() {
@@ -242,7 +242,7 @@ export default function ResidentialSolutionPage() {
       {/* 11. Contact Us Form */}
       <ContactForm />
 
-      {/* 12. Follow SUNGROW */}
+      {/* 12. Follow HIND POWER PROJECT */}
       <FollowBar />
     </div>
   );

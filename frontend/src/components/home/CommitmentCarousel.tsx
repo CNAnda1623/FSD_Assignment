@@ -8,7 +8,7 @@ import { SmartImage } from "../ui/SmartImage";
 import { Container } from "../ui/Container";
 
 export function CommitmentCarousel() {
-  const { whySungrow, commitment } = homeData;
+  const { whyHPP, commitment } = homeData;
 
   return (
     <section className="py-20 lg:py-28 bg-[#f5f5f5] overflow-hidden">
@@ -16,14 +16,14 @@ export function CommitmentCarousel() {
         {/* Vertical Orange Accent Line */}
         <div className="w-0.5 h-12 bg-[#fe7900] mx-auto mb-6" />
 
-        {/* Why Sungrow Section Heading in Brand Orange */}
+        {/* Why HIND POWER PROJECT Section Heading in Brand Orange */}
         <h2 className="text-3xl sm:text-4xl md:text-[40px] font-medium text-[#fe7900] text-center mb-6 tracking-tight">
-          {whySungrow.heading}
+          {whyHPP.heading}
         </h2>
 
         {/* Scroll Reveal Text */}
         <ScrollRevealText
-          text={whySungrow.description}
+          text={whyHPP.description}
           className="text-lg sm:text-xl font-normal text-neutral-800 leading-relaxed max-w-4xl mx-auto text-center mb-8"
         />
 

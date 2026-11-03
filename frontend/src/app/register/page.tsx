@@ -207,18 +207,18 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen w-full bg-[#d9d9d9] flex flex-col justify-between items-center py-4 sm:py-6 px-4 font-sans select-none">
-      {/* 1. Header: Centered SUNGROW Logo */}
+      {/* 1. Header: Centered HPP Logo */}
       <header className="w-full flex justify-center pt-1 pb-2 sm:pb-3">
         <Link
           href="/"
           className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fe7900] rounded transition-transform hover:scale-105 duration-200"
         >
           <SmartImage
-            assetKey="brand.logo"
+            assetKey="brand.hpp"
             width={160}
             height={36}
             className="w-36 sm:w-42 h-auto object-contain"
-            alt="SUNGROW Logo"
+            alt="Hind Power Project"
             priority
           />
         </Link>
@@ -351,7 +351,7 @@ export default function RegisterPage() {
                 <span className="leading-tight text-neutral-700">
                   I have read and agree to the{" "}
                   <a
-                    href="https://www.sungrowpower.com/in/en/privacy-policy-terms"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#fe7900] underline"
@@ -360,7 +360,7 @@ export default function RegisterPage() {
                   </a>{" "}
                   and{" "}
                   <a
-                    href="https://www.sungrowpower.com/in/en/terms-of-service"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#fe7900] underline"
@@ -379,7 +379,7 @@ export default function RegisterPage() {
                   className="w-4 h-4 mt-0.5 rounded text-[#fe7900] focus:ring-[#fe7900] border-neutral-300 cursor-pointer shrink-0"
                 />
                 <span className="leading-tight text-neutral-500">
-                  I agree to receive Sungrow product updates, news, and promotional emails.
+                  I agree to receive HIND POWER PROJECT product updates, news, and promotional emails.
                 </span>
               </label>
             </div>
@@ -441,7 +441,7 @@ export default function RegisterPage() {
                   setEmail(e.target.value);
                   setErrorMsg(null);
                 }}
-                placeholder="sungrow@email.com"
+                placeholder="hindpower@email.com"
                 className="w-full pb-1.5 pt-0.5 bg-transparent border-0 border-b border-[#b2b2b2] text-sm sm:text-base text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-[#fe7900] transition-colors rounded-none"
                 required
               />
@@ -652,9 +652,9 @@ export default function RegisterPage() {
       {/* 4. Page Footer */}
       <footer className="w-full text-center py-2 sm:py-3 text-[11px] sm:text-xs text-neutral-600 font-normal">
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          <span>2025 SUNGROW. All Rights Reserved</span>
+          <span>2025 HIND POWER PROJECT. All Rights Reserved</span>
           <a
-            href="https://www.sungrowpower.com/in/en/privacy-policy-terms"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-black transition-colors"
@@ -662,7 +662,7 @@ export default function RegisterPage() {
             Privacy
           </a>
           <a
-            href="https://www.sungrowpower.com/in/en/about-us/contact-us"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-black transition-colors"

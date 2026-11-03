@@ -13,7 +13,7 @@ import { EsgContactBanner } from "@/components/sustainability/EsgContactBanner";
 export const metadata: Metadata = {
   title: "Sustainability",
   description:
-    "Discover Sungrow's Sustainability Strategy, Climate Targets, Governance Framework and ESG Reports.",
+    "Discover HIND POWER PROJECT's Sustainability Strategy, Climate Targets, Governance Framework and ESG Reports.",
 };
 
 export default function SustainabilityPage() {

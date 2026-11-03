@@ -1,4 +1,4 @@
-import { sungrowUrl } from "@/lib/links";
+import { externalUrl } from "@/lib/links";
 
 export const ciData = {
   hero: {
@@ -91,7 +91,7 @@ export const ciData = {
         tag: "Business Owners",
         title: "Drinking Water From The Sun 100 kWp PV Plant",
         assetKey: "ci.case.1",
-        href: sungrowUrl("cases/drinking-water-100kwp"),
+        href: externalUrl("cases/drinking-water-100kwp"),
       },
       {
         id: "c2",
@@ -99,12 +99,12 @@ export const ciData = {
         title:
           "C&I PV with SG125CX-P2 in Metzlesdorf Münch Energie Is the Customer",
         assetKey: "ci.case.2",
-        href: sungrowUrl("cases/metzlesdorf-sg125cx"),
+        href: externalUrl("cases/metzlesdorf-sg125cx"),
       },
     ],
     cta: {
       label: "Explore More",
-      href: sungrowUrl("cases-business"),
+      href: externalUrl("cases-business"),
     },
   },
 
@@ -116,29 +116,29 @@ export const ciData = {
         category: "3-Phase String Inverter",
         name: "150kW SG150CX",
         assetKey: "ci.product.1",
-        learnMoreUrl: sungrowUrl("products/sg150cx"),
-        docUrl: sungrowUrl("support/documentation/sg150cx"),
+        learnMoreUrl: externalUrl("products/sg150cx"),
+        docUrl: externalUrl("support/documentation/sg150cx"),
       },
       {
         id: "p2",
         category: "3-Phase String Inverter",
         name: "125kW SG125CX-P2",
         assetKey: "ci.product.2",
-        learnMoreUrl: sungrowUrl("products/sg125cx-p2"),
-        docUrl: sungrowUrl("support/documentation/sg125cx-p2"),
+        learnMoreUrl: externalUrl("products/sg125cx-p2"),
+        docUrl: externalUrl("support/documentation/sg125cx-p2"),
       },
       {
         id: "p3",
         category: "Smart Energy Management Platform",
         name: "iSolarCloud",
         assetKey: "ci.product.3",
-        learnMoreUrl: sungrowUrl("products/isolarcloud"),
-        docUrl: sungrowUrl("support/documentation/isolarcloud"),
+        learnMoreUrl: externalUrl("products/isolarcloud"),
+        docUrl: externalUrl("support/documentation/isolarcloud"),
       },
     ],
     cta: {
       label: "Explore More",
-      href: sungrowUrl("products"),
+      href: externalUrl("products"),
     },
   },
 };

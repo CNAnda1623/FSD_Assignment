@@ -1,4 +1,4 @@
-import { internalLinks, sungrowUrl } from "@/lib/links";
+import { internalLinks, externalUrl } from "@/lib/links";
 
 export const homeData = {
   hero: {
@@ -15,7 +15,7 @@ export const homeData = {
       src: "/Images/Home/2nd.jpg",
     },
     mobileSlideB: {
-      headline: "Sungrow No.1 in Global Inverter Bankability",
+      headline: "HPP No.1 in Global Inverter Bankability",
       sublines: ["Fortune Future 50", "AAA MSCI ESG Rating in 2025"],
       stat: "75 GW⁺",
       statLabel: "India Shipments of PV Inverters",
@@ -25,7 +25,7 @@ export const homeData = {
   },
 
   statsBanner: {
-    badge: "Sungrow No.1 in Global Inverter Bankability",
+    badge: "HPP No.1 in Global Inverter Bankability",
     subbadges: ["Fortune Future 50", "AAA MSCI ESG Rating in 2025"],
     stat: "75 GW⁺",
     statLabel: "India Shipments of PV Inverters",
@@ -36,7 +36,7 @@ export const homeData = {
   cleanPower: {
     heading: "Clean Power for All",
     description:
-      "At Sungrow, we are committed to promoting the development and application of clean energy across all major energy technology sectors, including solar, wind, storage, electrification, and hydrogen. Our goal is to increase the adoption of clean energy and drive more creative, innovative ways to use clean energy.",
+      "At HIND POWER PROJECT, we are committed to promoting the development and application of clean energy across all major energy technology sectors, including solar, wind, storage, electrification, and hydrogen. Our goal is to increase the adoption of clean energy and drive more creative, innovative ways to use clean energy.",
     stats: [
       {
         id: "stat-1",
@@ -110,11 +110,11 @@ export const homeData = {
           },
           {
             label: "Cases & Stories",
-            href: sungrowUrl("cases-homeowners"),
+            href: externalUrl("cases-homeowners"),
           },
           {
             label: "Service & Support",
-            href: sungrowUrl("support/home"),
+            href: externalUrl("support/home"),
           },
         ],
       },
@@ -131,11 +131,11 @@ export const homeData = {
           },
           {
             label: "C&I PV+ESS+EV Charging Solution",
-            href: sungrowUrl("solution/ci-pv-ess-ev-charging"),
+            href: externalUrl("solution/ci-pv-ess-ev-charging"),
           },
           {
             label: "Cases & Stories",
-            href: sungrowUrl("cases-business"),
+            href: externalUrl("cases-business"),
           },
         ],
       },
@@ -145,11 +145,11 @@ export const homeData = {
         title: "For Utility",
         bgAssetKey: "home.scenarios.utility",
         links: [
-          { label: "Utility PV System", href: sungrowUrl("utility/pv-system") },
-          { label: "Energy Storage System", href: sungrowUrl("utility/storage-system") },
-          { label: "Floating PV System", href: sungrowUrl("utility/floating-pv") },
-          { label: "Wind", href: sungrowUrl("utility/wind") },
-          { label: "Hydrogen", href: sungrowUrl("utility/hydrogen") },
+          { label: "Utility PV System", href: externalUrl("utility/pv-system") },
+          { label: "Energy Storage System", href: externalUrl("utility/storage-system") },
+          { label: "Floating PV System", href: externalUrl("utility/floating-pv") },
+          { label: "Wind", href: externalUrl("utility/wind") },
+          { label: "Hydrogen", href: externalUrl("utility/hydrogen") },
         ],
       },
       {
@@ -158,9 +158,9 @@ export const homeData = {
         title: "Installers",
         bgAssetKey: "home.scenarios.installers",
         links: [
-          { label: "Sungrow for Installers", href: sungrowUrl("partners/installers") },
-          { label: "Become an Installer", href: sungrowUrl("partners/become-installer") },
-          { label: "Installer Support", href: sungrowUrl("support/installer") },
+          { label: "HPP for Installers", href: externalUrl("partners/installers") },
+          { label: "Become an Installer", href: externalUrl("partners/become-installer") },
+          { label: "Installer Support", href: externalUrl("support/installer") },
         ],
       },
       {
@@ -171,16 +171,16 @@ export const homeData = {
         links: [
           { label: "For Home Solutions", href: internalLinks.residentialSolution, isLocal: true },
           { label: "For Business Solutions", href: internalLinks.ciPvSolution, isLocal: true },
-          { label: "Become a Distributor", href: sungrowUrl("partners/become-distributor") },
+          { label: "Become a Distributor", href: externalUrl("partners/become-distributor") },
         ],
       },
     ],
   },
 
-  whySungrow: {
-    heading: "Why Sungrow",
+  whyHPP: {
+    heading: "Why HIND POWER PROJECT",
     description:
-      "Backed by the trust of partners worldwide, Sungrow is committed to delivering unwavering excellence in technology, manufacturing and service. Together, let's bridge to a sustainable future.",
+      "Backed by the trust of partners worldwide, HIND POWER PROJECT is committed to delivering unwavering excellence in technology, manufacturing and service. Together, let's bridge to a sustainable future.",
   },
 
   commitment: {
@@ -190,31 +190,31 @@ export const homeData = {
         id: "tech",
         title: "Technological Innovation",
         assetKey: "home.commitment.tech",
-        href: sungrowUrl("technologyinnovation"),
+        href: externalUrl("technologyinnovation"),
       },
       {
         id: "lean",
         title: "Lean Manufacturing",
         assetKey: "home.commitment.lean",
-        href: sungrowUrl("lean-manufacturing"),
+        href: externalUrl("lean-manufacturing"),
       },
       {
         id: "global",
         title: "Global Presence",
         assetKey: "home.commitment.global",
-        href: sungrowUrl("globalpresence"),
+        href: externalUrl("globalpresence"),
       },
       {
         id: "service",
         title: "Professional Services",
         assetKey: "home.commitment.service",
-        href: sungrowUrl("service-brand"),
+        href: externalUrl("service-brand"),
       },
       {
         id: "excellence",
         title: "Sustainable Excellence",
         assetKey: "home.commitment.excellence",
-        href: sungrowUrl("sustainability"),
+        href: externalUrl("sustainability"),
       },
     ],
   },
@@ -237,7 +237,7 @@ export const homeData = {
         title: "Greener World, Greater Us",
         assetKey: "home.panels.people",
         ctaLabel: "Explore More",
-        href: sungrowUrl("about/career"),
+        href: externalUrl("about/career"),
         isLocal: false,
       },
       {
@@ -246,7 +246,7 @@ export const homeData = {
         title: "Where the Sun Shines, We're Ready to Serve",
         assetKey: "home.panels.service",
         ctaLabel: "Explore More",
-        href: sungrowUrl("service-brand"),
+        href: externalUrl("service-brand"),
         isLocal: false,
       },
     ],
@@ -279,10 +279,10 @@ export const homeData = {
     featured: {
       tag: "News",
       title:
-        "Countdown Begins! Sungrow Unveils New Innovation at All Energy Australia 2025",
+        "Countdown Begins! HIND POWER PROJECT Unveils New Innovation at All Energy Australia 2025",
       date: "Oct. 22, 2025",
       assetKey: "home.news.1",
-      href: sungrowUrl("newsdetail/all-energy-australia-2025"),
+      href: externalUrl("newsdetail/all-energy-australia-2025"),
     },
     items: [
       {
@@ -290,33 +290,33 @@ export const homeData = {
         title: "2025 MEA PV & ESS summit",
         date: "Aug. 21, 2025",
         assetKey: "home.news.2",
-        href: sungrowUrl("event/2025-mea-pv-ess-summit"),
+        href: externalUrl("event/2025-mea-pv-ess-summit"),
       },
       {
         tag: "Events",
         title: "2025 Southeast Asia Distributor Summit",
         date: "Jul. 17, 2025",
         assetKey: "home.news.3",
-        href: sungrowUrl("seadistributorsummit"),
+        href: externalUrl("seadistributorsummit"),
       },
       {
         tag: "Events",
         title: "Microinverter Quick Installation Challenge",
         date: "Apr. 16, 2025",
         assetKey: "home.news.4",
-        href: sungrowUrl("microinverter-challenge"),
+        href: externalUrl("microinverter-challenge"),
       },
       {
         tag: "Influencer",
         title: "Explore the New MG Series Together with Jonn",
         date: "Jul. 31, 2025",
         assetKey: "home.news.5",
-        href: sungrowUrl("mg-series-jonn"),
+        href: externalUrl("mg-series-jonn"),
       },
     ],
     cta: {
       label: "Explore More",
-      href: sungrowUrl("news-media-news-list"),
+      href: externalUrl("news-media-news-list"),
     },
   },
 };

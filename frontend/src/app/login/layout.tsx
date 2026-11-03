@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Login",
-  description: "Sign in to Sungrow",
+  description: "Sign in to HIND POWER PROJECT",
 };
 
 export default function LoginLayout({
